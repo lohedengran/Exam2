@@ -34,9 +34,18 @@
           </ul>
         </div>
         <div class="social">
-          <a href=""><i class="fab fa-facebook-f"></i></a>
-          <a href=""><i class="fab fa-twitter"></i></a>
-          <a href=""><i class="fab fa-instagram"></i></a>
+          <div class="fab-container">
+            <img class="circle" src="img/social-ellipse.png" alt="circle" />
+            <a href=""><i class="fab fa-facebook-f"></i></a>
+          </div>
+          <div class="fab-container">
+            <img class="circle" src="img/social-ellipse.png" alt="circle" />
+            <a href=""><i class="fab fa-twitter"></i></a>
+          </div>
+          <div class="fab-container">
+            <img class="circle" src="img/social-ellipse.png" alt="circle" />
+            <a href=""><i class="fab fa-instagram"></i></a>
+          </div>
         </div>
       </nav>
       <div class="heading">
@@ -263,8 +272,48 @@
       </div>
       <button class="gallery-button">See more</button>
     </section>
-    <section class="contact"></section>
+    <section class="contact">
+      <div id="map"></div>
+    </section>
+    <div id="form">
+      <div class="form-title">
+        <img src="img/form-line.png" alt="line" />
+        <h3>GET IN TOUCH</h3>
+      </div>
+      <div class="form-info">
+        <div class="form-contacts">
+          <div><p>91 Nolan Extensions Suite 670</p></div>
+          <div><p>+001 356-868-2454</p></div>
+          <div><p>montichello@service.com</p></div>
+          <div><p>From 07:05AM to 19:30PM</p></div>
+        </div>
+        <div class="form-fill-in">
+          <form>
+            <div>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                value="Mollie Medina"
+                required
+              />
+            </div>
+            <div>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                required
+                placeholder="Email"
+              />
+            </div>
+            <button class="form-button">SUBMIT</button>
+          </form>
+        </div>
+      </div>
+    </div>
     <footer class="footer"></footer>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBCCfHwA1xy3bjjOehkss09KnskXvAd_HE"></script>
     <script src="src/jquery.js"></script>
     <script src="src/script.js"></script>
     <script type="text/javascript" src="slick/slick.min.js"></script>

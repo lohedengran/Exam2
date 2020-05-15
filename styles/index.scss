@@ -49,16 +49,34 @@ $white: #ffffff;
   justify-content: space-between;
   align-content: center;
 }
-.fab {
-  color: $white;
+.fab-container {
   width: 40px;
   height: 40px;
-  border: $white 1px solid;
-  border-radius: 50%;
-  text-align: center;
 }
-.fab:hover {
-  border: 2px $white solid;
+.circle {
+  position: absolute;
+}
+.fab {
+  color: $white;
+  position: relative;
+  top: 11px;
+  font-size: 16px;
+  line-height: 18px;
+}
+.fa-facebook-f {
+  left: 15px;
+}
+.fa-twitter {
+  left: 12px;
+}
+.fa-instagram {
+  left: 13px;
+}
+
+.fab-container:hover {
+  border-radius: 50%;
+
+  background-color: $blue;
 }
 
 .heading {
@@ -381,6 +399,65 @@ h3 {
 }
 .contact {
   height: 700px;
+}
+#map {
+  height: 700px;
+  width: 100%;
+}
+#form {
+  width: 770px;
+  height: 450px;
+  border: 1px solid blue;
+  background-image: url(/img/form-background.png);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.form-title {
+  font-weight: bold;
+  font-size: 44px;
+  line-height: 54px;
+  color: $grey;
+  width: 332px;
+  height: 84px;
+  text-align: center;
+}
+.form-info {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 69px;
+}
+.form-contacts {
+  width: 286px;
+  height: 196px;
+  font-size: 18px;
+  line-height: 28px;
+}
+.form-fill-in {
+  width: 310px;
+  height: 196px;
+}
+input {
+  margin-bottom: 27px;
+  height: 41px;
+  width: 310px;
+  border: none;
+  border-bottom: 1px solid $grey;
+}
+.form-button {
+  width: 140px;
+  height: 50px;
+  margin-left: 170px;
+  background: none;
+  border: 1px solid $grey;
+}
+.form-button:hover {
+  background-color: $purple;
+  color: $white;
+  border: none;
 }
 .footer {
   height: 549px;
