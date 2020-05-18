@@ -4,6 +4,36 @@ $purple: #7e5aff;
 $blue: #55b7ff;
 $white: #ffffff;
 
+.slick-dots {
+  // position: absolute;
+  // right: 0;
+  // top: 50%;
+  // transform: translateY(-50%);
+  // list-style: none;
+  // text-align: center;
+  // margin: 0px 30px;
+  // padding: 11% 1% 11% 1.5%;
+  // border-left: 3px solid lightgrey;
+  // height: 100%;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: space-between;
+  // align-items: flex-end;
+  // height: 210px;
+}
+
+// .slick-dots li button {
+//   border-radius: 50%;
+//   width: 20px;
+//   height: 20px;
+//   border: 1px solid $white;
+//   text-indent: -9999px;
+//   outline: 0;
+//   &:hover {
+//     background-color: $white;
+//   }
+// }
+
 .screen {
   font-family: "Montserrat", sans-serif;
   min-width: 1600px;
@@ -75,8 +105,7 @@ $white: #ffffff;
 
 .fab-container:hover {
   border-radius: 50%;
-
-  background-color: $blue;
+  border: 1px solid $white;
 }
 
 .heading {
@@ -114,19 +143,25 @@ $white: #ffffff;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
   margin-bottom: 140px;
+  background-color: $white;
 }
 .projects__title {
-  color: $grey;
-  text-transform: uppercase;
-  font-size: 44px;
-  line-height: 54px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   margin-top: 100px;
   height: 84px;
+}
+.title {
+  text-transform: uppercase;
+  font-size: 44px;
+  line-height: 54px;
+}
+.grey {
+  color: $grey;
 }
 .project1 {
   display: flex;
@@ -175,15 +210,16 @@ h3 {
   font-size: 18px;
   line-height: 30px;
 }
-.project1-button {
+.button {
   border: 1px solid $grey;
   width: 190px;
   height: 50px;
   font-size: 14px;
+  text-transform: uppercase;
   margin-bottom: 60px;
   color: $black;
 }
-.project1-button:hover {
+.blue:hover {
   background-color: $blue;
   border: none;
   color: $white;
@@ -204,15 +240,7 @@ h3 {
 .project2 {
   display: flex;
 }
-.project2-button {
-  border: 1px solid $grey;
-  width: 190px;
-  height: 50px;
-  font-size: 14px;
-  margin-bottom: 60px;
-  color: $black;
-}
-.project2-button:hover {
+.purple:hover {
   background-color: $purple;
   border: none;
   color: $white;
@@ -246,15 +274,13 @@ h3 {
   padding-top: 135px;
   margin-bottom: 89px;
   height: 84px;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 44px;
-  text-transform: uppercase;
-  color: $white;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+}
+.white {
+  color: $white;
 }
 .news-slider {
   width: 1200px;
@@ -347,10 +373,8 @@ h3 {
 }
 .gallery-title {
   margin-top: 140px;
+  margin-bottom: 89px;
   height: 84px;
-  font-weight: bold;
-  font-size: 44px;
-  color: $grey;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -384,31 +408,23 @@ h3 {
   justify-content: space-between;
   align-content: space-between;
 }
-.gallery-button {
-  width: 190px;
-  height: 50px;
-  text-transform: uppercase;
-  font-size: 14px;
-  border: 1px solid $grey;
-  margin-bottom: 139px;
-}
-.gallery-button:hover {
-  border: none;
-  background-color: $blue;
-  color: $white;
-}
 .contact {
   height: 700px;
 }
 #map {
   height: 700px;
   width: 100%;
+  position: relative;
 }
 #form {
+  position: relative;
+  margin: auto;
+  top: -300px;
   width: 770px;
   height: 450px;
-  border: 1px solid blue;
+  background-color: $white;
   background-image: url(/img/form-background.png);
+  box-shadow: 0px -4px 30px rgba(133, 133, 133, 0.2);
   background-repeat: no-repeat;
   background-position: bottom;
   display: flex;
@@ -417,13 +433,13 @@ h3 {
   justify-content: space-around;
 }
 .form-title {
-  font-weight: bold;
-  font-size: 44px;
-  line-height: 54px;
-  color: $grey;
   width: 332px;
   height: 84px;
-  text-align: center;
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 }
 .form-info {
   display: flex;
@@ -460,9 +476,28 @@ input {
   border: none;
 }
 .footer {
+  display: flex;
+  justify-content: center;
   height: 549px;
   background-image: url(/img/footer-img.png),
     linear-gradient(225deg, #7e5aff -2.19%, #55b7ff 103.21%);
   background-repeat: no-repeat;
   background-size: cover;
+}
+.footer__content {
+  margin-top: 204px;
+  width: 770px;
+  height: 112px;
+  display: flex;
+  justify-content: space-between;
+}
+.footer__left {
+  font-size: 14px;
+  color: $white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.bottom {
+  margin-top: 6px;
 }

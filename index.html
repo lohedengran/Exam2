@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Montichello</title>
     <link rel="stylesheet" href="styles/normalize.css" />
-    <link rel="stylesheet" href="styles/index.css" />
     <link rel="shortcut icon" type="image/png" href="img/favicon-16x16.png" />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;600&family=Open+Sans:wght@300;400;700&family=Source+Sans+Pro:wght@200;300;400;600;700&display=swap"
@@ -14,10 +13,12 @@
     <link rel="stylesheet" type="text/css" href="slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
     <link rel="stylesheet" href="css/custom.css" />
+
     <script
       src="https://kit.fontawesome.com/55638b1666.js"
       crossorigin="anonymous"
     ></script>
+    <link rel="stylesheet" href="styles/index.css" />
   </head>
   <body class="screen">
     <header class="header">
@@ -63,11 +64,11 @@
         </div>
         <div>
           <h1 class="heading__top">SASSY & CLASSY</h1>
-          <h3 class="heading__bottom">WE MAKE THE WORLD BETTER EVERYDAY</h3>
+          <h3 class="heading__bottom">WE MAKE THE WORLD VIP EVERYDAY</h3>
         </div>
         <div>
-          <h1 class="heading__top">NICE & EASY</h1>
-          <h3 class="heading__bottom">WE MAKE THE WORLD FRIENDLY EVERYDAY</h3>
+          <h1 class="heading__top">EASY & BREEZY</h1>
+          <h3 class="heading__bottom">WE MAKE THE WORLD RELAXED EVERYDAY</h3>
         </div>
       </div>
       <div class="scroll-down">
@@ -77,7 +78,7 @@
     <section id="projects">
       <div class="projects__title">
         <img src="img/Line 1.png" alt="line" />
-        <h3>What we do</h3>
+        <h3 class="title grey">What we do</h3>
       </div>
       <div class="project1">
         <div class="project1__left">
@@ -99,7 +100,7 @@
               the right frame of mind. The truth is, our thoughts are very
               powerful.
             </p>
-            <button class="project1-button">MORE DETAILS</button>
+            <button class="button blue">More details</button>
           </div>
           <div class="project__address">
             <img
@@ -125,7 +126,7 @@
               at the big ‘R’ of recognition and how a digital advertising
               network may help.
             </p>
-            <button class="project2-button">MORE DETAILS</button>
+            <button class="button purple">More details</button>
           </div>
           <div class="project__address">
             <img
@@ -151,7 +152,7 @@
     <section class="news">
       <div class="news__title">
         <img src="img/news-line.png" alt="line" />
-        <h3>Latest news</h3>
+        <h3 class="title white">Latest news</h3>
       </div>
       <div class="news-slider">
         <div class="article">
@@ -249,7 +250,7 @@
     <section class="gallery">
       <div class="gallery-title">
         <img src="img/Gallery-line.png" alt="line" />
-        <h3>GALLERY</h3>
+        <h3 class="title grey">Gallery</h3>
       </div>
       <div class="gallery-pics">
         <div class="gallery-pics-left">
@@ -270,49 +271,71 @@
           /></a>
         </div>
       </div>
-      <button class="gallery-button">See more</button>
+      <button class="button purple">See more</button>
     </section>
     <section class="contact">
       <div id="map"></div>
+      <div id="form">
+        <div class="form-title">
+          <img src="img/form-line.png" alt="line" />
+          <h3 class="title grey">Get in touch</h3>
+        </div>
+        <div class="form-info">
+          <div class="form-contacts">
+            <div><p>91 Nolan Extensions Suite 670</p></div>
+            <div><p>+001 356-868-2454</p></div>
+            <div><p>montichello@service.com</p></div>
+            <div><p>From 07:05AM to 19:30PM</p></div>
+          </div>
+          <div class="form-fill-in">
+            <div id="form-messages"></div>
+            <form id="ajax-contact" method="post" action="mailer.php">
+              <div>
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  value="Mollie Medina"
+                  required
+                />
+              </div>
+              <div>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  required
+                  placeholder="Email"
+                />
+              </div>
+              <button class="form-button">SUBMIT</button>
+            </form>
+          </div>
+        </div>
+      </div>
     </section>
-    <div id="form">
-      <div class="form-title">
-        <img src="img/form-line.png" alt="line" />
-        <h3>GET IN TOUCH</h3>
-      </div>
-      <div class="form-info">
-        <div class="form-contacts">
-          <div><p>91 Nolan Extensions Suite 670</p></div>
-          <div><p>+001 356-868-2454</p></div>
-          <div><p>montichello@service.com</p></div>
-          <div><p>From 07:05AM to 19:30PM</p></div>
+    <footer class="footer">
+      <div class="footer__content">
+        <div class="footer__left">
+          <img src="img/Logo.svg" alt="Logo" />
+          <p>Copyrights © 2020 Montichello</p>
         </div>
-        <div class="form-fill-in">
-          <form>
-            <div>
-              <input
-                type="text"
-                name="name"
-                id="name"
-                value="Mollie Medina"
-                required
-              />
-            </div>
-            <div>
-              <input
-                type="email"
-                name="email"
-                id="email"
-                required
-                placeholder="Email"
-              />
-            </div>
-            <button class="form-button">SUBMIT</button>
-          </form>
+        <div class="social bottom">
+          <div class="fab-container">
+            <img class="circle" src="img/social-ellipse.png" alt="circle" />
+            <a href=""><i class="fab fa-facebook-f"></i></a>
+          </div>
+          <div class="fab-container">
+            <img class="circle" src="img/social-ellipse.png" alt="circle" />
+            <a href=""><i class="fab fa-twitter"></i></a>
+          </div>
+          <div class="fab-container">
+            <img class="circle" src="img/social-ellipse.png" alt="circle" />
+            <a href=""><i class="fab fa-instagram"></i></a>
+          </div>
         </div>
       </div>
-    </div>
-    <footer class="footer"></footer>
+    </footer>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBCCfHwA1xy3bjjOehkss09KnskXvAd_HE"></script>
     <script src="src/jquery.js"></script>
     <script src="src/script.js"></script>

@@ -18,7 +18,7 @@ $(document).ready(function () {
 });
 
 let map = new google.maps.Map(document.getElementById("map"), {
-  center: { lat: 55.608978, lng: 12.99538 },
+  center: { lat: 55.600842, lng: 13.02079 },
   zoom: 14,
   disableDefaultUI: true,
   styles: [
@@ -188,9 +188,8 @@ let icon = {
   scaledSize: new google.maps.Size(40, 40),
 };
 let marker = new google.maps.Marker({
-  position: { lat: 55.608978, lng: 12.99538 },
+  position: { lat: 55.600842, lng: 13.02079 },
   map: map,
-  draggable: true,
   icon: icon,
 });
 
