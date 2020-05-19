@@ -2,6 +2,8 @@ $(document).ready(function () {
   $(".heading").slick({
     dots: true,
     arrows: false,
+
+    // dotsClass: $(this).toggleClass("rotate-90"),
   });
 });
 
@@ -13,12 +15,64 @@ $(document).ready(function () {
     dots: true,
     arrows: true,
     autoplay: true,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 4000,
+    speed: 1000,
+    prevArrow:
+      ' <span class= "slide-arrow prev-arrow"><i class="fas fa-angle-left"></i></span>',
+    nextArrow:
+      ' <span class = "slide-arrow next-arrow"><i class="fas fa-angle-right"></i></span>',
+    // centerMode: true,
+    // respondTo: "slider",
   });
 });
 
+$('a[href*="#"]')
+  .not('[href="#"]')
+  .not('[href="#0"]')
+  .click(function (event) {
+    if (
+      location.pathname.replace(/^\//, "") ==
+        this.pathname.replace(/^\//, "") &&
+      location.hostname == this.hostname
+    ) {
+      let target = $(this.hash);
+      target = target.length ? target : $("[name=" + this.hash.slice(1) + "]");
+
+      if (target.length) {
+        event.preventDefault();
+        $("html, body").animate(
+          {
+            scrollTop: target.offset().top,
+          },
+          500,
+          function () {
+            let $target = $(target);
+            $target.focus();
+            if ($target.is(":focus")) {
+              return false;
+            } else {
+              $target.attr("tabindex", "-1");
+              $target.focus();
+            }
+          }
+        );
+      }
+    }
+  });
+
+// $(".linkname").on("click", function (e) {
+//   e.preventDefault();
+//   $("html, body").animate(
+//     {
+//       scrollTop: $($(this).attr("href")).offset().top,
+//     },
+//     500,
+//     "linear"
+//   );
+// });
+
 let map = new google.maps.Map(document.getElementById("map"), {
-  center: { lat: 55.600842, lng: 13.02079 },
+  center: { lat: 55.60894, lng: 12.99596 },
   zoom: 14,
   disableDefaultUI: true,
   styles: [
@@ -188,7 +242,7 @@ let icon = {
   scaledSize: new google.maps.Size(40, 40),
 };
 let marker = new google.maps.Marker({
-  position: { lat: 55.600842, lng: 13.02079 },
+  position: { lat: 55.60894, lng: 12.99596 },
   map: map,
   icon: icon,
 });
@@ -196,3 +250,22 @@ let marker = new google.maps.Marker({
 $(function () {
   $(".form-button").click(function () {});
 });
+
+// $(function () {
+//   $("form[name='form']").validate({
+//     rules: {
+//       name: "required",
+//       email: {
+//         required: true,
+//         email: true,
+//       },
+//     },
+//     messages: {
+//       name: "Please enter your name",
+//       email: "Please enter a valid email address",
+//     },
+//     submitHandler: function (form) {
+//       form.submit();
+//     },
+//   });
+// });
