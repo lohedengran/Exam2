@@ -265,51 +265,50 @@ let marker = new google.maps.Marker({
 //   });
 // });
 
-// $(function () {
-//   $("form[name='form']").validate({
-//     rules: {
-//       name: "required",
-//       email: {
-//         required: true,
-//         email: true,
-//       },
-//     },
-//     messages: {
-//       name: "Please enter your name",
-//       email: "Please enter a valid email address",
-//     },
-//     submitHandler: function (form) {
-//       form.submit();
-
-//     },
-//   });
-// });
-
-// $(function () {
-//   $("form[name='form']").validate({
-//     rules: {
-//       name: "required",
-//       email: {
-//         required: true,
-//         email: true,
-//       },
-//     },
-//     messages: {
-//       name: "Please enter your name",
-//       email: "Please enter a valid email address",
-//     },
-
-//     submitHandler: function (form) {
-//       form.submit();
-//     },
-//   });
-// });
-
-$(form).ready(function () {
-  $("#btn-submit").click(function () {
-    return "Thank you, we will contact you!";
-  });
-  $("#btn-submit").click(function (event) {
-    $(".form-fill-in").html(event.result);
+$(function () {
+  $("form[name='form']").validate({
+    rules: {
+      name: "required",
+      email: {
+        required: true,
+        email: true,
+      },
+    },
+    messages: {
+      name: "Please enter your name",
+      email: "Please enter a valid email address",
+    },
+    submitHandler: function (form) {
+      form.submit();
+    },
   });
 });
+
+// $(function () {
+//   $("form[name='form']").validate({
+//     rules: {
+//       name: "required",
+//       email: {
+//         required: true,
+//         email: true,
+//       },
+//     },
+//     messages: {
+//       name: "Please enter your name",
+//       email: "Please enter a valid email address",
+//     },
+
+//     submitHandler: function (form) {
+//       form.submit();
+//     },
+//   });
+// });
+
+// $(form).ready(function () {
+//   $("#btn-submit").click(function () {
+//     return "Thank you, we will contact you!";
+//   });
+//   $("#btn-submit").click(function (event) {
+//     $(".form-fill-in").html(event.result);
+//   });
+// });
