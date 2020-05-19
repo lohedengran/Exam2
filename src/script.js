@@ -247,9 +247,23 @@ let marker = new google.maps.Marker({
   icon: icon,
 });
 
-$(function () {
-  $(".form-button").click(function () {});
-});
+// $(function () {
+//   $(".form-button").click(function () {});
+// });
+
+// $(document).ready(function () {
+//   $("form").submit(function (event) {
+//     event.preventDefault();
+//     let name = $("#mail-name").val();
+//     let email = $("#mail-email").val();
+//     let submit = $("#mail-submit").val();
+//     $(".form-message").load("#"), {
+//       name: name,
+//       email: email,
+//       submit: submit
+//     };
+//   });
+// });
 
 // $(function () {
 //   $("form[name='form']").validate({
@@ -266,6 +280,36 @@ $(function () {
 //     },
 //     submitHandler: function (form) {
 //       form.submit();
+
 //     },
 //   });
 // });
+
+// $(function () {
+//   $("form[name='form']").validate({
+//     rules: {
+//       name: "required",
+//       email: {
+//         required: true,
+//         email: true,
+//       },
+//     },
+//     messages: {
+//       name: "Please enter your name",
+//       email: "Please enter a valid email address",
+//     },
+
+//     submitHandler: function (form) {
+//       form.submit();
+//     },
+//   });
+// });
+
+$(form).ready(function () {
+  $("#btn-submit").click(function () {
+    return "Thank you, we will contact you!";
+  });
+  $("#btn-submit").click(function (event) {
+    $(".form-fill-in").html(event.result);
+  });
+});

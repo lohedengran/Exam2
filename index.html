@@ -358,27 +358,32 @@
               </div>
             </div>
             <div class="form-fill-in">
-              <div id="form-messages"></div>
-              <form id="ajax-contact" method="post" action="mailer.php">
+              <form class="" name="form">
                 <div>
                   <input
+                    id="name"
                     type="text"
                     name="name"
-                    id="name"
                     value="Mollie Medina"
-                    required
                   />
                 </div>
                 <div>
                   <input
+                    id="email"
                     type="email"
                     name="email"
-                    id="email"
-                    required
                     placeholder="Email"
                   />
                 </div>
-                <button class="form-button">SUBMIT</button>
+
+                <button
+                  id="btn-submit"
+                  type="submit"
+                  name="sumbit"
+                  class="form-button"
+                >
+                  SUBMIT
+                </button>
               </form>
             </div>
           </div>

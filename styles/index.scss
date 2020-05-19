@@ -515,6 +515,9 @@ input {
   border: none;
   border-bottom: 1px solid $grey;
 }
+form .error {
+  color: $purple;
+}
 .form-button {
   width: 140px;
   height: 50px;

@@ -708,6 +708,10 @@ input {
   border-bottom: 1px solid #2c4058;
 }
 
+form .error {
+  color: #7e5aff;
+}
+
 .form-button {
   width: 140px;
   height: 50px;
