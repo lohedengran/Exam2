@@ -32,18 +32,17 @@ $white: #ffffff;
 }
 .list {
   width: 515px;
-
   list-style: circle;
   display: flex;
   justify-content: space-between;
 }
+
 .list a {
   text-decoration: none;
   color: $white;
   text-transform: uppercase;
   &:hover {
     list-style: disc;
-    text-decoration: underline;
   }
 }
 
@@ -105,21 +104,6 @@ $white: #ffffff;
 // ul {
 //   list-style: none;
 // }
-// .heading__top {
-//   font-weight: 700;
-//   font-size: 80px;
-//   line-height: 98px;
-//   letter-spacing: 0.1em;
-//   color: $white;
-//   text-align: center;
-// }
-// .heading__bottom {
-//   font-size: 18px;
-//   line-height: 22px;
-//   letter-spacing: 0.3em;
-//   color: $white;
-//   text-align: center;
-// }
 
 .scroll-down {
   align-self: center;
@@ -137,16 +121,10 @@ $white: #ffffff;
 }
 .project-container {
   height: 1367px;
+  width: 100%;
   margin-top: 100px;
 }
-// .projects__title {
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   justify-content: space-between;
-//   margin-top: 100px;
-//   height: 84px;
-// }
+
 .title {
   display: flex;
   flex-direction: column;
@@ -161,26 +139,64 @@ $white: #ffffff;
 .grey {
   color: $grey;
 }
+#projects {
+  width: 100%;
+  height: 1194px;
+}
 .project {
   display: flex;
   margin-bottom: 140px;
+  &__second {
+    display: flex;
+    justify-content: flex-end;
+  }
 }
-.project1__left {
+.project1 {
   width: 845px;
   height: 527px;
+  &__rectangle {
+    position: absolute;
+    width: 585px;
+    height: 470px;
+  }
+  &__img {
+    position: relative;
+    left: 215px;
+    top: 57px;
+    width: 630px;
+    height: 470px;
+  }
 }
-.project1-rectangle {
-  position: absolute;
-  width: 585px;
-  height: 470px;
-}
-.project1-img {
+.project2 {
   position: relative;
-  left: 215px;
-  top: 57px;
-  width: 630px;
-  height: 470px;
+  width: 845px;
+  height: 527px;
+
+  &__rectangle {
+    position: relative;
+    left: 260px;
+    width: 585px;
+    height: 470px;
+  }
+  &__img {
+    position: absolute;
+    top: 57px;
+    width: 630px;
+    height: 470px;
+  }
 }
+// .project1-rectangle {
+//   position: absolute;
+//   width: 585px;
+//   height: 470px;
+// }
+// .project1-img {
+//   position: relative;
+//   left: 215px;
+//   top: 57px;
+//   width: 630px;
+//   height: 470px;
+// }
 .project-content {
   color: $grey;
   height: 351px;
@@ -247,27 +263,19 @@ h3 {
   width: 9px;
   height: 17px;
 }
-// .project2 {
-//   display: flex;
-// }
 
-.project2__right {
-  position: relative;
-  width: 845px;
-  height: 527px;
-}
-.project2-ractangle {
-  position: relative;
-  left: 260px;
-  width: 585px;
-  height: 470px;
-}
-.project2-img {
-  position: absolute;
-  top: 57px;
-  width: 630px;
-  height: 470px;
-}
+// .project2ractangle {
+//   position: relative;
+//   left: 260px;
+//   width: 585px;
+//   height: 470px;
+// }
+// .project2-img {
+//   position: absolute;
+//   top: 57px;
+//   width: 630px;
+//   height: 470px;
+// }
 
 .news {
   height: 1035px;
@@ -296,7 +304,6 @@ h3 {
 .news-slider {
   width: 1200px;
   height: 570px;
-
   margin: auto;
 }
 .slide-arrow.prev-arrow.slick-arrow {
@@ -314,9 +321,9 @@ h3 {
   align-items: center;
   top: 50%;
   left: -100px;
-}
-.slide-arrow.prev-arrow.slick-arrow:hover {
-  cursor: pointer;
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .slide-arrow.next-arrow.slick-arrow {
@@ -334,38 +341,30 @@ h3 {
   align-items: center;
   top: 50%;
   right: -100px;
-}
-.slide-arrow.next-arrow.slick-arrow:hover {
-  cursor: pointer;
-}
-
-.slick-dots {
-  bottom: -25px;
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .slick-dots li button {
   border-radius: 50%;
   // border: none;
-  border: 1px solid $white;
-  // width: 10px;
-  // height: 10px;
+  // border: 1px solid $white;
+  width: 10px;
+  height: 10px;
   // background-color: #fff;
   text-indent: -9999px;
   outline: 0;
   font-size: 0;
-
-  &:hover {
-    background-color: $white;
-  }
-
-  // &:focus {
-  //   transform: scale(1.5);
-  //   transition: all 0.3s ease 0s;
-  // }
 }
 .slick-dots li.slick-active {
   background-color: $white;
   border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  text-indent: -9999px;
+  outline: 0;
+  font-size: 0;
 }
 
 .article {

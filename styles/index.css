@@ -60,7 +60,6 @@
 
 .list a:hover {
   list-style: disc;
-  text-decoration: underline;
 }
 
 .social {
@@ -156,6 +155,7 @@
 
 .project-container {
   height: 1367px;
+  width: 100%;
   margin-top: 100px;
 }
 
@@ -184,6 +184,11 @@
   color: #2c4058;
 }
 
+#projects {
+  width: 100%;
+  height: 1194px;
+}
+
 .project {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -191,20 +196,49 @@
   margin-bottom: 140px;
 }
 
-.project1__left {
+.project__second {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.project1 {
   width: 845px;
   height: 527px;
 }
 
-.project1-rectangle {
+.project1__rectangle {
   position: absolute;
   width: 585px;
   height: 470px;
 }
 
-.project1-img {
+.project1__img {
   position: relative;
   left: 215px;
+  top: 57px;
+  width: 630px;
+  height: 470px;
+}
+
+.project2 {
+  position: relative;
+  width: 845px;
+  height: 527px;
+}
+
+.project2__rectangle {
+  position: relative;
+  left: 260px;
+  width: 585px;
+  height: 470px;
+}
+
+.project2__img {
+  position: absolute;
   top: 57px;
   width: 630px;
   height: 470px;
@@ -300,26 +334,6 @@ h3 {
   height: 17px;
 }
 
-.project2__right {
-  position: relative;
-  width: 845px;
-  height: 527px;
-}
-
-.project2-ractangle {
-  position: relative;
-  left: 260px;
-  width: 585px;
-  height: 470px;
-}
-
-.project2-img {
-  position: absolute;
-  top: 57px;
-  width: 630px;
-  height: 470px;
-}
-
 .news {
   height: 1035px;
   background-image: url(/img/background-news.png), linear-gradient(225deg, #24ccfa 11.16%, #3c7fd4 89.18%);
@@ -397,25 +411,23 @@ h3 {
   cursor: pointer;
 }
 
-.slick-dots {
-  bottom: -25px;
-}
-
 .slick-dots li button {
   border-radius: 50%;
-  border: 1px solid #ffffff;
+  width: 10px;
+  height: 10px;
   text-indent: -9999px;
   outline: 0;
   font-size: 0;
 }
 
-.slick-dots li button:hover {
-  background-color: #ffffff;
-}
-
 .slick-dots li.slick-active {
   background-color: #ffffff;
   border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  text-indent: -9999px;
+  outline: 0;
+  font-size: 0;
 }
 
 .article {
