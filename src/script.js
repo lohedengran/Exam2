@@ -2,8 +2,8 @@ $(document).ready(function () {
   $(".heading").slick({
     dots: true,
     arrows: false,
-
-    // dotsClass: $(this).toggleClass("rotate-90"),
+    vertical: true,
+    verticalSwiping: true,
   });
 });
 
@@ -21,8 +21,6 @@ $(document).ready(function () {
       ' <span class= "slide-arrow prev-arrow"><i class="fas fa-angle-left"></i></span>',
     nextArrow:
       ' <span class = "slide-arrow next-arrow"><i class="fas fa-angle-right"></i></span>',
-    // centerMode: true,
-    // respondTo: "slider",
   });
 });
 
@@ -59,17 +57,6 @@ $('a[href*="#"]')
       }
     }
   });
-
-// $(".linkname").on("click", function (e) {
-//   e.preventDefault();
-//   $("html, body").animate(
-//     {
-//       scrollTop: $($(this).attr("href")).offset().top,
-//     },
-//     500,
-//     "linear"
-//   );
-// });
 
 let map = new google.maps.Map(document.getElementById("map"), {
   center: { lat: 55.60894, lng: 12.99596 },
@@ -247,44 +234,7 @@ let marker = new google.maps.Marker({
   icon: icon,
 });
 
-// $(function () {
-//   $(".form-button").click(function () {});
-// });
-
 // $(document).ready(function () {
-//   $("form").submit(function (event) {
-//     event.preventDefault();
-//     let name = $("#mail-name").val();
-//     let email = $("#mail-email").val();
-//     let submit = $("#mail-submit").val();
-//     $(".form-message").load("#"), {
-//       name: name,
-//       email: email,
-//       submit: submit
-//     };
-//   });
-// });
-
-$(function () {
-  $("form[name='form']").validate({
-    rules: {
-      name: "required",
-      email: {
-        required: true,
-        email: true,
-      },
-    },
-    messages: {
-      name: "Please enter your name",
-      email: "Please enter a valid email address",
-    },
-    submitHandler: function (form) {
-      form.submit();
-    },
-  });
-});
-
-// $(function () {
 //   $("form[name='form']").validate({
 //     rules: {
 //       name: "required",
@@ -297,12 +247,29 @@ $(function () {
 //       name: "Please enter your name",
 //       email: "Please enter a valid email address",
 //     },
-
 //     submitHandler: function (form) {
 //       form.submit();
 //     },
 //   });
 // });
+
+$(document).ready(function () {
+  $("form[name='form']").validate({
+    rules: {
+      name: "required",
+      email: "required",
+    },
+    messages: {
+      name: "Please enter your name",
+      email: "Please enter a valid email address",
+    },
+    submitHandler: function (form) {
+      form.submit();
+      return (document.getElementById("demo").innerHTML =
+        "Thank you we, will contact you");
+    },
+  });
+});
 
 // $(form).ready(function () {
 //   $("#btn-submit").click(function () {
