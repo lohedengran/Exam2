@@ -253,23 +253,23 @@ let marker = new google.maps.Marker({
 //   });
 // });
 
-$(document).ready(function () {
-  $("form[name='form']").validate({
-    rules: {
-      name: "required",
-      email: "required",
-    },
-    messages: {
-      name: "Please enter your name",
-      email: "Please enter a valid email address",
-    },
-    submitHandler: function (form) {
-      form.submit();
-      return (document.getElementById("demo").innerHTML =
-        "Thank you we, will contact you");
-    },
-  });
-});
+// $(document).ready(function () {
+//   $("form[name='form']").validate({
+//     rules: {
+//       name: "required",
+//       email: "required",
+//     },
+//     messages: {
+//       name: "Please enter your name",
+//       email: "Please enter a valid email address",
+//     },
+//     submitHandler: function (form) {
+//       form.submit();
+//       return (document.getElementById("demo").innerHTML =
+//         "Thank you we, will contact you");
+//     },
+//   });
+// });
 
 // $(form).ready(function () {
 //   $("#btn-submit").click(function () {
@@ -279,3 +279,29 @@ $(document).ready(function () {
 //     $(".form-fill-in").html(event.result);
 //   });
 // });
+
+$(form).ready(function () {
+  $("form[name='form']").validate({
+    rules: {
+      name: "required",
+      email: {
+        required: true,
+        email: true,
+      },
+    },
+    messages: {
+      name: "Please enter your name",
+      email: "Please enter a valid email address",
+    },
+    submitHandler: function (form) {
+      $(form).ready(function () {
+        $("#btn-submit").click(function () {
+          return "Thank you, we will contact you!";
+        });
+        $("#btn-submit").click(function (event) {
+          $(".form-fill-in").html(event.result);
+        });
+      });
+    },
+  });
+});
