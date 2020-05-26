@@ -192,6 +192,7 @@ $white: #ffffff;
   height: 527px;
   &__rectangle {
     position: absolute;
+    background-color: $blue;
     width: 585px;
     height: 470px;
   }
@@ -210,6 +211,7 @@ $white: #ffffff;
 
   &__rectangle {
     position: relative;
+    background-color: $purple;
     left: 260px;
     width: 585px;
     height: 470px;

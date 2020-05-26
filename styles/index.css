@@ -280,6 +280,7 @@
 
 .project1__rectangle {
   position: absolute;
+  background-color: #55b7ff;
   width: 585px;
   height: 470px;
 }
@@ -300,6 +301,7 @@
 
 .project2__rectangle {
   position: relative;
+  background-color: #7e5aff;
   left: 260px;
   width: 585px;
   height: 470px;
